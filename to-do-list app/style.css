@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height:100vh ;
+    padding: 10px;
+    background: linear-gradient(135deg, #153677, #4e085f);
+}
+.todo-list{
+    width: 100%;
+    max-width: 640px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 100px auto 20px ;
+    padding:40px 30px 70px;
+}
+.todo-list h1{
+    color: #002765;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.todo-list img{
+    width: 40px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:25px ;
+    padding-left: 20px;
+    border-radius: 30px;
+    background: #edeef0;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    background: #ff5945;
+    padding: 16px 50px;
+    border-radius: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    
+}
+ul li{
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 17px ;
+    position: relative;
+}
+ul li::before{
+    width: 28px;
+    height: 28px;
+    content: "";
+    position:absolute;
+    top: 12px;
+    left: 8px;
+    border-radius: 50%;
+    background: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+}
+ul li.checked{
+   color: #555;
+   text-decoration: line-through;
+}
+ul li.checked::before{
+   background-image: url(images/checked.png);
+}
+ul li span{
+    width: 35px;
+    height:35px;
+    top: 5px;
+    right: 0;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    border-radius: 50px;
+    color: #555;
+}
+ul li span:hover{
+    background: #edeef0;
+}
