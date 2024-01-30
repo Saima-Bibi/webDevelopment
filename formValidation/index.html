@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>form Validation</title>
+</head>
+<body>
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h1>Contact us</h1>
+            <span>Feel free to contact us</span>
+         </div> 
+         <div class="contact-container">
+            <div class="contact-item">
+                <form  name="myForm" action="" onsubmit="return validateForm()" >
+                    <div class="row">
+                        <div class="column">
+                            <input type="text" placeholder="Name" name="Name" id="Name" required>
+                            <p class="error" id="nerror"></p>
+                        </div>
+                        <div class="column half">
+                            <input type="email" placeholder="Email" name="Email" id="Email">
+                            <p class="error" id="eerror"></p>
+                        </div>
+                        <div class="column half">
+                            <input type="tel" placeholder="Phone" name="Phone"  id="Phone"required >
+                            <p class="error" id="perror"></p>
+                        </div>
+                        <div class="column">
+                            <textarea placeholder="Message" name="Message" required></textarea>
+                            <p class="error" id="merror"></p>
+                        </div>
+                        <div class="column">
+                            <input type="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+         </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
